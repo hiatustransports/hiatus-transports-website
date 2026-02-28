@@ -3,61 +3,394 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hiatus Transports</title>
+  <title>Hiatus Transports | Nationwide Trucking</title>
+  <meta name="description" content="Hiatus Transports — Nationwide freight, professional drivers, and elite partnerships. Apply as a company driver or start a lease partnership today." />
+
   <style>
-    body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(
-    180deg,
-    #0f2f5b 0%,
-    #1e4f8a 40%,
-    #f4f7fb 100%
-  );
-}
-    .heroimg{width:100%;border-radius:18px;box-shadow:0 14px 30px rgba(0,0,0,.15);display:block}
-    .cta{display:flex;justify-content:center;gap:60px;flex-wrap:wrap;margin:40px 0}
-    .cta a{text-decoration:none;text-align:center;color:#0f172a}
-    .circle{width:120px;height:120px;border-radius:999px;display:flex;align-items:center;justify-content:center;
-      box-shadow:0 14px 28px rgba(0,0,0,.14)}
-    .blue{background:#1d4ed8}
-    .green{background:#16a34a}
-    .label{margin-top:12px;font-weight:800}
+    :root{
+      --blue:#1e3a8a;     /* deep blue */
+      --blue2:#2563eb;    /* accent blue */
+      --green:#16a34a;    /* brand green */
+      --white:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --card:#ffffff;
+      --stroke:rgba(15,23,42,.10);
+      --shadow:0 14px 30px rgba(0,0,0,.14);
+      --shadow2:0 10px 24px rgba(0,0,0,.10);
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+    body{font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background: linear-gradient(180deg,#0f2f5b 0%, #1e4f8a 40%, #f4f7fb 100%);
+    }
+
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:18px}
+    .card{
+      background:var(--card);
+      border:1px solid var(--stroke);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow2);
+    }
+    .pad{padding:22px}
+
+    /* Sticky header */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      background:rgba(15,47,91,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.10);
+    }
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:12px 18px; max-width:1100px; margin:0 auto;
+      color:#fff;
+    }
+    .brand{
+      display:flex; flex-direction:column; line-height:1.05;
+    }
+    .brand b{font-size:18px; letter-spacing:.2px}
+    .brand span{font-size:12px; color:rgba(255,255,255,.85)}
+    .nav-actions{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .btn{
+      disdisplay:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:999px;
+      font-weight:800; text-decoration:none; border:1px solid transparent;
+      transition:transform .08s ease, filter .2s ease;
+      white-space:nowrap;
+    }
+    .btn:active{transform:scale(.98)}
+    .btn-blue{background:var(--blue2); color:#fff}
+    .btn-green{background:var(--green); color:#fff}
+    .btn-ghost{background:transparent; border-color:rgba(255,255,255,.25); color:#fff}
+
+    /* Hero */
+    .hero{
+      margin-top:18px;
+      overflow:hidden;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .heroimg{
+      width:100%;
+      border-radius:var(--radius);
+      display:block;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(255,255,255,.25);
+    }
+    .hero-copy h1{
+      margin:0 0 10px;
+      font-size:42px;
+      color:var(--blu letter-spacing:-.6px;
+    }
+    .hero-copy p{
+      margin:0 0 14px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.55;
+    }
+    .pillrow{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top:10px
+    }
+    .pill{
+      display:inline-flex;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(37,99,235,.10);
+      border:1px solid rgba(37,99,235,.20);
+      color:var(--blue);
+      font-weight:800;
+      font-size:13px;
+    }
+
+    /* CTA circles */
+    .cta{
+      display:flex; justify-content:center; gap:60px; flex-wrap:wrap;
+      margin:18px 0 10px;
+    }
+    .cta a{text-decoration:none;text-align:center}
+    .circle{
+      width:120px;height:120px;border-radius:999px;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:var(--shadow2);
+      border:1px solid rgba(15,23,42,.08);
+    }
+    .circle.blue{background:var(--blue2)}
+    .circle.green{background:var(--green).circle.green{background:var(--green)}
     .icon{color:#fff;font-size:44px;font-weight:900;line-height:1}
-    .contact{background:#fff;border-radius:18px;padding:22px;margin-top:20px;box-shadow:0 10px 25px rgba(0,0,0,.1);text-align:center}
-    .contact h2{margin:0 0 12px;color:#1e3a8a}
-    .contact a{color:#16a34a;font-weight:800;text-decoration:none}
-    .footer{text-align:center;color:#475569;padding:20px 0 8px;font-size:14px}
+    .label{margin-top:12px;font-weight:900;color:var(--blue);font-size:16px}
+    .sublabel{margin-top:6px;color:var(--muted);font-size:13px}
+
+    /* Sections */
+    .section{margin-top:18px}
+    .section h2{
+      margin:0 0 12px;
+      font-size:24px;
+      color:var(--blue);
+      letter-spacing:-.3px;
+    }
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .mini h3{margin:0 0 6px; font-size:16px; color:var(--text)}
+    .mini p{margin:0; color:var(--muted); font-size:14px; line-height:1.55}
+    .tag{
+      display:inline-flex; margin-bottom:10px;
+      padding:6px 10px; border-radius:999px;
+      background:rgba(22,163,74,.12);
+      border:1px solid rgba(22,163,74,.20);
+      color:#0b3b1c;
+      font-weight:900;
+      font-size:12px;
+    }
+
+    /* Recruiting block */
+    .two{
+      display:grid;
+      grid-template gap:14px;
+      align-items:stretch;
+    }
+    .list{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.65}
+    .kpi{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:10px;
+      margin-top:12px;
+    }
+    .kpi .box{
+      border-radius:14px;
+      background:rgba(15,23,42,.04);
+      border:1px solid rgba(15,23,42,.08);
+      padding:12px;
+      text-align:center;
+    }
+    .kpi b{display:block; font-size:18px; color:var(--blue)}
+    .kpi span{font-size:12px; color:var(--muted)}
+
+    /* Certifications strip */
+    .strip{
+      display:flex; flex-wrap:wrap; gap:10px;
+    }
+    .badge{
+      padding:10px 12px;
+      border-radius:14px;
+      background:rgba(37,99,235,.08);
+      border:1px solid rgba(37,99,235,.18);
+      font-weight:900;
+      color:var(--blue);
+      font-size:13px;
+    }
+
+    /* Contact */
+    .contact-grid{-columns: 1fr 1fr;}e);play:inline-flex; align-items:center; justify-content:center;
+      margin:0;display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .contact a{
+      color:var(--green);
+      font-weight:900;
+      text-decoration:none;
+    }
+    .muted{color:var(--muted)}
+    .footer{
+      text-align:center;
+      padding:18px 0 10px;
+      color:rgba(255,255,255,.85);
+      font-size:13px;
+    }
+
+    /* Mobile optimization */
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .hero-copy h1{font-size:34px}
+      .grid3{grid-template-columns:1fr}
+      .two{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .nav-actions{justify-content:flex-start}
+      .cta{gap:26px}
+      .circle{width:108px;height:108px}
+    }
   </style>
 </head>
+
 <body>
+  <!-- Sticky Header -->
+  <div class="topbar">
+    <div class="topbar-i<div class="brand">
+        <b>Hiatus Transports</b>
+        <span>Nationwide Freight • Professional Drivers • Elite Partnerships</span>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="#contact">Contact</a>
+        <a class="btn btn-blue" href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank" rel="noopener noreferrer">Driver Application</a>
+        <a class="btn btn-green" href="https://forms.gle/HDUQ3rjiAwohNBVKA" target="_blank" rel="noopener noreferrer">Start Lease</a>
+      </div>
+    </div>
+  </div>
+
   <div class="wrap">
 
-    <img src="/semi-hero.png" alt="Hiatus Transports Semi Truck" class="heroimg" />
+    <!-- HERO -->
+    <div class="section hero">
+      <div class="hero-grid">
+        <div>
+          <img class="heroimg" src="/semi-hero.png" alt="Hiatus Transports Semi Truck">
+          <div class="cta">
+            <a href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank" rel="noopener noreferrer">
+              <div class="circle blue"><div class="icon">🚚</div></div>
+              <div class="label">Company Driver Application</div>
+              <div class="sublabel">Fast apply • Mobile friendly</div>
+            </a>
 
-    <div class="cta">
-      <a href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank" rel="noopener noreferrer">
-        <div class="circle blue"><div class="icon">🚚</div></div>
-        <div class="label">Company Driver Application</div>
-      </a>
- <a href="https://forms.gle/HDUQ3rjiAwohNBVKA" target="_blank" rel="noopener noreferrer">
-        <div class="circle green"><div class="icon">$</div></div>
-        <div class="label">Start Lease Agreement</div>
-      </a>
+            <a href="https://forms.gle/HDUQ3rjiAwohNBVKA" target="_blank" rel="noopener noreferrer">
+              <div class="circle green"><div class="icon">$</div></div>
+              <div class="label">Start Lease Agreement</div>
+              <div class="sublabel">Owner-operator partnerships</div>
+ </div>
+        </div>
+
+        <div class="card pad hero-copy">
+          <h1>Drive With a Team That Moves Different.</h1>
+          <p>
+            Hiatus Transports operates nationwide with a professional standard: clear communication, strong dispatch support,
+            and elite partnerships built on performance.
+          </p>
+
+          <div class="pillrow">
+            <div class="pill">Nationwide lanes</div>
+            <div class="pill">Fast onboarding</div>
+            <div class="pill">Elite compliance</div>
+          </div>
+
+          <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn-blue" href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank" rel="noopener noreferrer">Apply to Drive</a>
+            <a class="btn btn-green" href="https://forms.gle/HDUQ3rjiAwohNBVKA" target="_blank" rel="noopener noreferrer">Lease Partnership</a>
+          </div>
+
+          <p style="margin-top:14px; font-size:13px;" class="muted">
+            Tip: If you’re on mobile, your application opens in a new tab.
+          </p>
+        </div>
+      </div>
     </div>
 
-    <img src="/handshake.png" alt="Hiatus Transport Partnership" class="heroimg" />
+    <!-- VALUE / SECTION CARDS -->
+    <div class="section card pad">
+      <h2>How We Add Value</h2>
+      <div class="grid3">
+<div class="tag">Operations</div>
+          <h3>Reliable Communication</h3>
+          <p>Clear expectations, fast responses, and professional follow-through—every load, every time.</p>
+        </div>
 
-    <div class="contact">
+        <div class="mini card pad" style="box-shadow:none;">
+          <div class="tag">Support</div>
+          <h3>Dispatch Coverage</h3>
+          <p>We help reduce confusion and downtime so drivers can stay focused on safe, consistent execution.</p>
+        </div>
+
+        <div class="mini card pad" style="box-shadow:none;">
+          <div class="tag">Standards</div>
+          <h3>Elite Compliance Mindset</h3>
+          <p>We take safety, paperwork, and professionalism seriously—because your name is your brand.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECRUITING -->
+    <div class="section two">
+      <div class="card pad">
+        <h2>Recruiting — Company Drivers</h2>
+        <p class="muted" style="margin:0;">
+          We’re building a high-standard driver team. If you value professionalism, consistency, and growth—apply today.
+        </p>
+        <ul class="list">
+          <li>Nationwide opportunities</li>
+          <li>Professional dispatch support</li>
+          <li>Clear expectations & strong communication</li>
+          <li>Safety-first culture</li>
+        </ul>        <div class="mini card pad" style="box-shadow:none;">            </a>nner"> <div class="kpi">
+          <div class="box"><b>Fast</b><span>Application process</span></div>
+          <div class="box"><b>Clear</b><span>Onboarding steps</span></div>
+          <div class="box"><b>Elite</b><span>Partnership standard</span></div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <a class="btn btn-blue" href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank" rel="noopener noreferrer">Apply as Company Driver</a>
+        </div>
+      </div>
+
+      <div class="card pad">
+        <h2>Owner-Operators — Lease Partnerships</h2>
+        <p class="muted" style="margin:0;">
+          If you have your own truck and want to partner under our authority with dispatch included, start the lease agreement.
+        </p>
+        <ul class="list">
+          <li>Elite partnership expectations</li>
+          <li>Dispatch included as part of the partnership</li>
+          <li>Professional brand presence & communication</li>
+          <li>Built for growth and long-term scale</li>
+        </ul>
+
+        <div style="margin-top:14px;">
+          <a class="btn btn-green" href="https://forms.gle/HDUQ3rjiAwohNBVKA" target="_blank" rel="noopener noreferrer">Start Lease Agreement</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HANDSHAKE IMAGE (below CTA area as requested earlier) -->
+    <div class="section">
+      <img class="heroimg <!-- CERTIFICATIONS / COMPLIANCE STRIP -->
+    <div class="section card pad">
+      <h2>Compliance & Professional Standards</h2>
+      <p class="muted" style="margin-top:0;">We operate with a documentation-first mindset to protect drivers, the company, and our customers.</p>
+      <div class="strip">
+        <div class="badge">Safety-First Culture</div>
+        <div class="badge">Professional Dispatch Support</div>
+        <div class="badge">Documentation & Paperwork Standards</div>
+        <div class="badge">Nationwide Operations</div>
+        <div class="badge">Elite Partnership Screening</div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="section card pad">
       <h2>Contact Hiatus Transports</h2>
-      <p>📞 Phone: <a href="tel:18064140184">806-414-0184</a></p>
-      <p>📧 Email: <a href="mailto:hiatustransports@gmail.com">hiatustransports@gmail.com</a></p>
-      <p style="margin:10px 0 0;color:#475569;">Drivers & Owner Operators Welcome Nationwide</p>
+
+      <div class="contact-grid">
+        <div class="card pad" style="box-shadow:none;">
+          <h3 style="margin:0 0 8px;color:var(--blue);">Direct</h3>
+          <p style="margin:0 0 10px;" class="muted">Fastest way to reach us:</p>
+          <p style="margin:0 0 6px;">📞 Phone: <a href="tel:18064140184">806-414-0184</a></p>
+          <p style="margin:0;">📧 Email: <a href="mailto:hiatustransports@gmail.com">hiatustransports@gmail.com</a></p>
+        </div>
+
+        <div class="card pad" style="box-shadow:none;">
+          <h3 style="margin:0 0 8px;color:var(--blue);">Quick Links</h3>
+          <p style="margin:0 0 10px;" class="muted">Apply / partner in one click:</p>
+          <p style="margin:0 0 10px;">
+            <a class="btn btn-blue" href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank" rel="noopener noreferrer">Driver Application</a>
+          </p>
+          <p style="margin:0;">" src="/handshake.png" alt="Hiatus Transport Partnership">
+ <a class="btn btn-green" href="https://forms.gle/HDUQ3rjiAwohNBVKA" target="_blank" rel="noopener noreferrer">Start Lease</a>
+          </p>
+        </div>
+      </div>
     </div>
 
     <div class="footer">© 2026 Hiatus Transports | All Rights Reserved</div>
   </div>
 </body>
-</html>
-      <a href="https://forms.gle/HDUQ3rjiAwohNBVKA" target="_blank" rel="noopener noreferrer">
-
+</html>    </div>
