@@ -260,6 +260,32 @@ ul{
       .cta-row{ grid-template-columns: 1fr; }
       .contact-grid{ grid-template-columns: 1fr; }
     }
+      /* === REAL CTA BUTTONS === */
+
+.cta-button{
+  margin-top:10px;
+  padding:12px 22px;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  font-weight:800;
+  cursor:pointer;
+  color:#fff;
+  transition:.25s ease;
+}
+
+.blue-btn{
+  background:#2563eb;
+}
+
+.green-btn{
+  background:#16a34a;
+}
+
+.cta-button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 18px rgba(0,0,0,.2);
+}
   </style>
 </head>
 
@@ -316,31 +342,44 @@ ul{
     <section class="card pad">
       <h2>Start Here</h2>
 <p style="background:#ff0;color:#000;padding:10px;border-radius:10px;font-weight:900;">
-✅ TEST: CTA SECTION LOADED
+
 </p>      <p class="muted" style="margin-top:0;">
         Choose the path that fits you. Nothing opens unless you click a button.
       </p>
 
       <div class="cta-row">
-        <div class="cta-card">
-          <div class="cta-circle blue" aria-hidden="true">🚚</div>
-          <div>
-<h3>Apply to Drive</h3>
-            <div class="cta-title">Company Driver Application</div>
-            <div class="cta-sub">Fast apply • Mobile friendly</div>
-            <a class="btn btn-blue" href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank" rel="noopener noreferrer">Apply Now</a>
-          </div>
-        </div>
-<div class="cta-circle green" aria-hidden="true">💼</div>
-        <div class="cta-card">
-          <h3>Start Lease Partnership</h3>
-         
-          <div>
-            <div class="cta-title">Owner-Operator Lease Partnership</div>
-            <div class="cta-sub">Run under our authority • Professional support</div>
-            <a class="btn btn-green" href="https://forms.gle/HDUQ3rjiAwohNBVKA" target="_blank" rel="noopener noreferrer">Start Here</a>
-          </div>
-        </div>
+       <div class="cta-card">
+
+  <div class="cta-circle blue">🚛</div>
+
+  <div>
+    <h3>Apply to Drive</h3>
+    <p>Company Driver Application</p>
+
+    <a href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank">
+      <button class="cta-button blue-btn">
+        Apply Now →
+      </button>
+    </a>
+  </div>
+
+</div> 
+<div class="cta-card">
+
+  <div class="cta-circle green">💰</div>
+
+  <div>
+    <h3>Start Lease Partnership</h3>
+    <p>Owner Operator Program</p>
+
+    <a href="https://forms.gle/D8paMhpZ7uuRCUVx6" target="_blank">
+      <button class="cta-button green-btn">
+        Start Agreement →
+      </button>
+    </a>
+  </div>
+
+</div>
       </div>
     </section>
 
@@ -436,6 +475,7 @@ ul{
   </div>
 </body>
 </html>
+
 
 
 
