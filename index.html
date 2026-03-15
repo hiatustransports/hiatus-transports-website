@@ -191,22 +191,32 @@ section{ margin-top:18px; }
       border:1px solid rgba(15,23,42,.10);
       box-shadow:0 14px 28px rgba(0,0,0,.10);
     }
-    .cta-circle{
-      width:86px; height:86px;
-      border-radius:999px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      font-weight:1000;
-      font-size:34px;
-      flex:0 0 auto;
-      box-shadow:0 12px 22px rgba(0,0,0,.12);
-    }
-    .cta-circle.blue{ background:var(--blue2); }
-    .cta-circle.green{ background:var(--green); }
-    .cta-title{ font-weight:1000; color:var(--blue); font-size:18px; }
-    .cta-sub{ color:var(--muted); font-size:13px; margin:4px 0 10px; }
+   .cta-circle{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:95px;
+  background:white;
+  cursor:pointer;
+  transition:all .25s ease;
+  box-shadow:0 30px 70px rgba(0,0,0,.25);
+}
+
+.cta-circle.blue{
+  border:12px solid #2563eb;
+}
+
+.cta-circle.green{
+  border:12px solid #16a34a;
+}
+
+.cta-circle:hover{
+  transform:translateY(-10px) scale(1.07);
+  box-shadow:0 40px 90px rgba(0,0,0,.35);
+}
 
     /* Split sections */
     .two{
