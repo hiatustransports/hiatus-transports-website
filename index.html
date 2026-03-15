@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hiatus Transports | Nationwide Trucking</title>
-  <meta name="description" content="Hiatus Transports — Nationwide freight, elite driver recruiting, and owner-operator partnerships. Apply to drive or start a lease partnership today." />
+  <meta name="description" content="Hiatus Transports — Nationwide freight, elite driver recruiting, and owner-operator partnerships." />
 
   <style>
     :root{
@@ -13,156 +13,185 @@
       --green:#16a34a;
       --text:#0f172a;
       --muted:#475569;
-      --card:rgba(255,255,255,.94);
+      --card:rgba(255,255,255,.95);
       --stroke:rgba(15,23,42,.10);
       --shadow:0 18px 40px rgba(0,0,0,.18);
       --shadow2:0 10px 24px rgba(0,0,0,.12);
       --radius:18px;
     }
-    /* FORCE TOP NAV BUTTONS WHITE */
-.topbar .btn{
-  color:#fff !important;
-}
-
-/* if any "light" button is in the top nav, make it match */
-.topbar .btn-light{
-  background:rgba(255,255,255,.12) !important;
-  border-color:rgba(255,255,255,.25) !important;
-  color:#fff !important;
-}
 
     *{ box-sizing:border-box; }
     html{ scroll-behavior:smooth; }
+
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text);
       background: linear-gradient(180deg,#0f2f5b 0%, #1e4f8a 40%, #f4f7fb 100%);
     }
-
-
-    /* Top Nav */
-    .topbar{
-      position:sticky; top:0; z-index:100;
-      background:rgba(15,47,91,.92);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid rgba(255,255,255,.10);
+ margin:0 auto;
+      padding:18px;
     }
-    .topbar-inner{
-      max-width:1100px; margin:0 auto;
-      padding:12px 18px;
-      display:flex; align-items:center; justify-content:space-between;
-      gap:12px; flex-wrap:wrap;
-      color:#fff;
-    }
-    .brand{ display:flex; flex-direction:column; line-height:1.05; }
-    .brand b{ font-size:18px; letter-spacing:.2px; }
-    .brand span{ font-size:12px; opacity:.85; font-weight:600; }
 
-    .nav-actions{ display:flex; gap:10px; flex-wrap:wrap; }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 14px;
-      border-radius:999px;
-      font-weight:900;
-      text-decoration:none;
-      border:1px solid transparent;
-      cursor:pointer;
-      transition: transform .08s ease, filter .15s ease;
-      white-space:nowrap;
-      font-size:14px;.btn-blue{ background:var(--blue2); color:#fff; }
-    .btn-green{ background:var(--green); color:#fff; }
-    .btn-ghost{ background:transparent; border-color:rgba(255,255,255,.25); color:#fff; }
-    .btn-light{ background:#fff; color:var(--blue); border-color:rgba(15,23,42,.10); }
-.nav-actions .btn{
-  color:white !important;
-}
-    /* Cards */
     .card{
       background:var(--card);
       border:1px solid var(--stroke);
       border-radius:var(--radius);
       box-shadow:var(--shadow2);
     }
+
     .pad{ padding:22px; }
 
-    /* Hero */
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:900;
+      text-decoration:none;
+      border:1px solid transparent;
+      transition:transform .15s ease, box-shadow .2s ease, filter .2s ease;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 22px rgba(0,0,0,.18);
+    }
+
+    .btn-blue{ background:var(--blue2); color:#fff; }
+    .btn-green{ background:var(--green); color:#fff; }
+    .btn-ghost{
+      background:transparent; color:#fff;
+      border-color:rgba(255,255,255,.25);
+    }
+    .btn-light{
+      background:#fff;
+      color:var(--blue);
+      border-color:rgba(15,23,42,.10);
+    }
+
+    /* top nav */
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(15,47,91,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.10);
+    }
+
+    .topbar-inner{
+      max-width:1100px;
+      margin:0 auto;
+      padding:12px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      color:#fff;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+    }
+    ..brand b{
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+
+    .brand span{
+      font-size:12px;
+      opacity:.85;
+      font-weight:600;
+    }
+
+    .nav-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .nav-actions .btn{
+      color:#fff !important;
+    }
+
+    /* hero */
     .hero{ margin-top:18px; }
+
     .heroimg{
       width:100%;
-      border-radius:var(--radius);
       display:block;
+      border-radius:var(--radius);
       box-shadow:0 22px 44px rgba(0,0,0,.28);
       border:1px solid rgba(255,255,255,.20);
     }
+
     .hero-overlay{
       margin-top:-62px;
       position:relative;
-    }
-    .hero-overlay .card{
-      text-align:center;
-      box-shadow:var(--shadow);
-    }
-    .hero h1{
-      margin:0;
-      font-size:44px;
-      color:var(--blue);
-      letter-spacing:-1px;
-    }
-    .btn:active{ transformfont-weight:1000;
-    }
-    .hero p{
-      margin:12px auto 0;
-      max-width:820px;
-      font-size:18px;
-      color:var(--muted);
-      line-height:1.55;
-    }
-    .hero-actions{
+    }wrap{.hero-actions{
       display:flex;
       justify-content:center;
-      gap:12px;
+      gap:14px;
       flex-wrap:wrap;
-      margin-top:20px;
+      margin-top:22px;
     }
 
-    /* Trust strip */
     .trust{
-      margin-top:16px;
+      margin-top:18px;
       text-align:center;
       font-weight:900;
       color:var(--blue);
     }
+
     .trust span{
       display:inline-block;
       margin:6px 10px;
-      padding:8px 12px;
+      padding:8px 14px;
       border-radius:999px;
-      background:rgba(37,99,235,.10);
-      border:1px solid rgba(37,99,235,.20);
-      color:var(--blue);
+      background:rgba(22,163,74,.15);
+      border:1px solid rgba(22,163,74,.30);
+      color:#065f46;
       font-size:13px;
     }
-section{ margin-top:18px; }
+
+    section{ margin-top:18px; }
+
     h2{
       margin:0 0 12px;
       font-size:26px;
-      color:var(--blue);
+      color:var(--green);
       letter-spacing:-.4px;
       font-weight:1000;
     }
-    .muted{ color:var(--muted); line-height:1.6; }
+color:var(--muted);
+      line-height:1.6;
+    }
 
     .grid3{
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:repeat(3, 1fr);
       gap:14px;
     }
-    .mini h3{ margin:0 0 8px; font-size:16px; }
-    .mini p{ margin:0; font-size:14px; color:var(--muted); line-height:1.55; }
+
+    .mini h3{
+      margin:0 0 8px;
+      font-size:16px;
+    }
+
+    .mini p{
+      margin:0;
+      font-size:14px;
+      color:var(--muted);
+      line-height:1.55;
+    }
+
     .tag{
       display:inline-flex;
       margin-bottom:10px;
@@ -175,64 +204,73 @@ section{ margin-top:18px; }
       font-size:12px;
     }
 
-    /* CTA blocks (not clickable except button) */
+    /* premium CTA circles */
     .cta-row{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-      margin-to}
+      display:flex;
+    .muted{justify-content:center;
+      gap:70px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
     .cta-card{
       display:flex;
-      gap:14px;
+      flex-direction:column;
       align-items:center;
-      padding:16px;
-      border-radius:18px;
-      background:rgba(255,255,255,.92);
-      border:1px solid rgba(15,23,42,.10);
-      box-shadow:0 14px 28px rgba(0,0,0,.10);
+      justify-content:center;
+      text-align:center;
     }
-   .cta-circle{
-  width:260px;
-  height:260px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:95px;
-  background:white;
-  cursor:pointer;
-  transition:all .25s ease;
-  box-shadow:0 30px 70px rgba(0,0,0,.25);
-}
 
-<a href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank" class="cta-circle blue">
-🚛
-</a>
+    .cta-circle{
+      width:240px;
+      height:240px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:90px;
+      background:#fff;
+      box-shadow:0 30px 70px rgba(0,0,0,.25);
+      transition:all .25s ease;
+      cursor:pointer;
+      text-decoration:none;
+    }
 
-<a href="https://forms.gle/HDUQ3rjiAwohNBVKA" target="_blank" class="cta-circle green">
-💼
-</a>
+    .cta-circle.blue{
+      border:12px solid #2563eb;
+    }
 
-.cta-circle:hover{
-  transform:translateY(-10px) scale(1.07);
-  box-shadow:0 40px 90px rgba(0,0,0,.35);
-}
+    .cta-circle.green{
+      border:12px solid #16a34a;
+    }
+      max-width:1100px;.cta-circle:hover{
+      transform:translateY(-10px) scale(1.06);
+      box-shadow:0 40px 90px rgba(0,0,0,.35);
+    }
 
-    /* Split sections */
+    .cta-title{
+      margin-top:16px;
+      font-weight:1000;
+      font-size:24px;
+    }
+
+    .cta-title.blue{ color:#2563eb; }
+    .cta-title.green{ color:#16a34a; }
+
     .two{
       display:grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns:1fr 1fr;
       gap:14px;
       align-items:stretch;
     }
-ul{
+
+    ul{
       margin:10px 0 0;
       padding-left:18px;
       color:var(--muted);
       line-height:1.65;
     }
 
-    /* Handshake */
     .photo{
       width:100%;
       border-radius:var(--radius);
@@ -240,14 +278,12 @@ ul{
       box-shadow:0 18px 40px rgba(0,0,0,.20);
       border:1px solid rgba(255,255,255,.20);
     }
-
-    /* Contact */
-    .contact-grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
+ display:grid;
+      grid-template-columns:1fr 1fr;
       gap:14px;
       align-items:stretch;
     }
+
     .contact a{
       color:var(--green);
       font-weight:1000;
@@ -261,65 +297,24 @@ ul{
       font-size:13px;
     }
 
-    /* Mobile */    ul{p:14px;
-    /* Sections */:scale(.98); }    .wrap{ max-width:1100px; margin:0 auto; padding:18px; }
-      @media (max-width: 900px){
+    @media (max-width: 900px){
       .hero h1{ font-size:34px; }
-      .grid3{ grid-template-columns: 1fr; }
-      .two{ grid-template-columns: 1fr; }
-     .cta-row{
-  display:flex;
-  justify-content:center;
-  gap:70px;
-  flex-wrap:wrap;
-  margin-top:40px;
-}
-
-.cta-card{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-}
-
-.cta-circle{
-  width:240px;
-  height:240px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:90px;
-  background:white;
-  box-shadow:0 30px 70px rgba(0,0,0,.25);
-  transition:all .25s ease;
-  cursor:pointer;
-}
-
-.cta-circle.blue{
-  border:12px solid #2563eb;
-}
-.cta-circle.green{
-  border:12px solid #16a34a;
-}
-
-.cta-circle:hover{
-  transform:translateY(-10px) scale(1.06);
-  box-shadow:0 40px 90px rgba(0,0,0,.35);
-}
-
-.cta-button:hover{
-  transform:translateY(-2px);
-  box-shadow:0 8px 18px rgba(0,0,0,.2);
-}
+      .grid3{ grid-template-columns:1fr; }
+      .two{ grid-template-columns:1fr; }
+      .contact-grid{ grid-template-columns:1fr; }
+      .cta-row{ gap:28px; }
+      .cta-circle{
+        width:190px;
+        height:190px;
+        font-size:72px;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <!-- TOP NAV -->
   <div class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">
+    <div class="topbar<div class="brand">
         <b>Hiatus Transports</b>
         <span>Nationwide Freight • Elite Recruiting • Owner-Operator Partnerships</span>
       </div>
@@ -334,9 +329,9 @@ ul{
       </div>
     </div>
   </div>
+
   <div class="wrap">
 
-    <!-- HERO -->
     <section class="hero">
       <img src="/semi-hero.png" alt="Hiatus Transports Semi Truck" class="heroimg">
 
@@ -350,8 +345,7 @@ ul{
 
           <div class="hero-actions">
             <a class="btn btn-blue" href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank" rel="noopener noreferrer">Apply to Drive</a>
-            <a class="btn btn-green" href="https://forms.gle/HDUQ3rjiAwohNBVKA" target="_blank" rel="noopener noreferrer">Start Lease Partnership</a>
-            <a class="btn btn-light" href="#contact">Talk to Us</a>
+            <a class="btn btn-green" href="https://forms.gle/HDUQ3rjiAwohNBVKA" target="_blank" rel="noopener noreferrer">Start Lease Partn<a class="btn btn-light" href="#contact">Talk to Us</a>
           </div>
 
           <div class="trust">
@@ -364,58 +358,34 @@ ul{
       </div>
     </section>
 
-    <!-- CTA BLOCKS (buttons only click) -->
     <section class="card pad">
       <h2>Start Here</h2>
-
-</p>      <p class="muted" style="margin-top:0;">
+      <p class="muted" style="margin-top:0;">
         Choose the path that fits you. Nothing opens unless you click a button.
       </p>
 
-     <div class="cta-row">
+      <div class="cta-row">
+        <div class="cta-card">
+          <a href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank" rel="noopener noreferrer" class="cta-circle blue">
+            🚛
+          </a>
+          <div class="cta-title blue">Apply to Drive</div>
+        </div>
 
-  <div class="cta-card" style="text-align:center;">
-    <a href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank" class="cta-circle blue" style="text-decoration:none;">
-      🚛
-    </a>
-    <h3 style="margin-top:16px;color:#2563eb;font-weight:900;font-size:24px;">
-      Apply to Drive
-    </h3>
-  </div>
-
-  <div class="cta-card" style="text-align:center;">
-    <a href="https://forms.gle/HDUQ3rjiAwohNBVKA" target="_blank" class="cta-circle green" style="text-decoration:none;">
-      💼
-    </a>
-    <h3 style="margin-top:16px;color:#16a34a;font-weight:900;font-size:24px;">
-      Start Lease Partnership
-    </h3>
-  </div>
-
-</div> 
-    <h3>Start Lease Partnership</h3>
-    <p>Owner Operator Program</p>
-
-    <a href="https://forms.gle/D8paMhpZ7uuRCUVx6" target="_blank">
-      <button class="cta-button green-btn">
-        Start Agreement →
-      </button>
-    </a>
-  </div>
-
-</div>
+        <div class="cta-card">
+          <a href="https://forms.gle/HDUQ3rjiAwohNBVKA" target="_blank" rel="noopener noreferrer" class="cta-circle green">
+            💼
+          </a>
+          <div class="cta-title green">Start Lease Partnership</div>
+        </div>
       </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="card pad">
+    </section> <section id="services" class="card pad">
       <h2>What We Deliver</h2>
       <div class="grid3">
         <div class="mini card pad" style="box-shadow:none;">
           <div class="tag">Operations</div>
           <h3>Clear Communication</h3>
-          <p>Fast responses, clear expectations, and professional follow-through on every
-            move.</p>
+          <p>Fast responses, clear expectations, and professional follow-through on every move.</p>
         </div>
 
         <div class="mini card pad" style="box-shadow:none;">
@@ -432,7 +402,6 @@ ul{
       </div>
     </section>
 
-    <!-- DRIVERS / PARTNERS -->
     <section class="two">
       <div id="drivers" class="card pad">
         <h2>Driver Recruiting</h2>
@@ -441,13 +410,12 @@ ul{
         </p>
         <ul>
           <li>Nationwide opportunities</li>
-          <li>Strong communication and support</li>
-          <li>Safety and compliance mindset</li>
+          <li>Strong communication and supp<li>Safety and compliance mindset</li>
           <li>Built for long-term scale</li>
         </ul>
         <div style="margin-top:14px;">
           <a class="btn btn-blue" href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank" rel="noopener noreferrer">Apply as Company Driver</a>
-          </div>
+        </div>
       </div>
 
       <div id="partners" class="card pad">
@@ -467,17 +435,15 @@ ul{
       </div>
     </section>
 
-    <!-- HANDSHAKE IMAGE -->
     <section>
       <img src="/handshake.png" alt="Partnership" class="photo">
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="card pad">
+    <section id="contact" class="card pad contact">
       <h2>Contact Hiatus Transports</h2>
       <div class="contact-grid">
-        <div class="card pad" style="box-shadow:none;">
-          <h3 style="margin:0 0 8px;color:var(--blue);font-weight:1000;">Direct</h3>
+        <div class="card pad" style="box-shadow:none;">ort</li>ership</a>-inner">
+    .contact-grid{<h3 style="margin:0 0 8px;color:var(--blue);font-weight:1000;">Direct</h3>
           <p class="muted" style="margin:0 0 10px;">Fastest way to reach us:</p>
           <p style="margin:0 0 6px;">📞 Phone: <a href="tel:18064140184">806-414-0184</a></p>
           <p style="margin:0;">📧 Email: <a href="mailto:hiatustransports@gmail.com">hiatustransports@gmail.com</a></p>
@@ -499,8 +465,3 @@ ul{
   </div>
 </body>
 </html>
-
-
-
-
-
