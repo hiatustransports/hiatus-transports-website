@@ -267,29 +267,45 @@ ul{
       .hero h1{ font-size:34px; }
       .grid3{ grid-template-columns: 1fr; }
       .two{ grid-template-columns: 1fr; }
-      .cta-row{ grid-template-columns: 1fr; }
-      .contact-grid{ grid-template-columns: 1fr; }
-    }
-      /* === REAL CTA BUTTONS === */
+     .cta-row{
+  display:flex;
+  justify-content:center;
+  gap:70px;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
 
-.cta-button{
-  margin-top:10px;
-  padding:12px 22px;
-  border:none;
-  border-radius:10px;
-  font-size:16px;
-  font-weight:800;
+.cta-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.cta-circle{
+  width:240px;
+  height:240px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:90px;
+  background:white;
+  box-shadow:0 30px 70px rgba(0,0,0,.25);
+  transition:all .25s ease;
   cursor:pointer;
-  color:#fff;
-  transition:.25s ease;
 }
 
-.blue-btn{
-  background:#2563eb;
+.cta-circle.blue{
+  border:12px solid #2563eb;
+}
+.cta-circle.green{
+  border:12px solid #16a34a;
 }
 
-.green-btn{
-  background:#16a34a;
+.cta-circle:hover{
+  transform:translateY(-10px) scale(1.06);
+  box-shadow:0 40px 90px rgba(0,0,0,.35);
 }
 
 .cta-button:hover{
@@ -356,40 +372,27 @@ ul{
         Choose the path that fits you. Nothing opens unless you click a button.
       </p>
 
-      <div class="cta-row">
-       <div class="cta-card">
+     <div class="cta-row">
 
-  .cta-circle{
-  width:220px;
-  height:220px;
-  border-radius:999px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-  font-size:80px;
-  font-weight:900;
-  background:#fff;
-  box-shadow:0 25px 60px rgba(0,0,0,.25);
-  transition:all .25s ease;
-}
+  <div class="cta-card" style="text-align:center;">
+    <a href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank" class="cta-circle blue" style="text-decoration:none;">
+      🚛
+    </a>
+    <h3 style="margin-top:16px;color:#2563eb;font-weight:900;font-size:24px;">
+      Apply to Drive
+    </h3>
+  </div>
 
-.cta-circle.blue{
-  border:10px solid #2563eb;
-}
+  <div class="cta-card" style="text-align:center;">
+    <a href="https://forms.gle/HDUQ3rjiAwohNBVKA" target="_blank" class="cta-circle green" style="text-decoration:none;">
+      💼
+    </a>
+    <h3 style="margin-top:16px;color:#16a34a;font-weight:900;font-size:24px;">
+      Start Lease Partnership
+    </h3>
+  </div>
 
-.cta-circle.green{
-  border:10px solid #16a34a;
-}
-
-.cta-circle:hover{
-  transform:translateY(-8px) scale(1.05);
-  box-shadow:0 35px 80px rgba(0,0,0,.35);
-}
-Step 3 — Save
-Scroll down → Commit changes.
-
-  <div>
+</div> 
     <h3>Start Lease Partnership</h3>
     <p>Owner Operator Program</p>
 
