@@ -349,23 +349,35 @@ ul{
       <div class="cta-row">
        <div class="cta-card">
 
-  <div class="cta-circle blue">🚛</div>
+  .cta-circle{
+  width:220px;
+  height:220px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:80px;
+  font-weight:900;
+  background:#fff;
+  box-shadow:0 25px 60px rgba(0,0,0,.25);
+  transition:all .25s ease;
+}
 
-  <div>
-    <h3>Apply to Drive</h3>
-    <p>Company Driver Application</p>
+.cta-circle.blue{
+  border:10px solid #2563eb;
+}
 
-    <a href="https://forms.gle/2YYb6bYeTri47yGQ9" target="_blank">
-      <button class="cta-button blue-btn">
-        Apply Now →
-      </button>
-    </a>
-  </div>
+.cta-circle.green{
+  border:10px solid #16a34a;
+}
 
-</div> 
-<div class="cta-card">
-
-  <div class="cta-circle green">💰</div>
+.cta-circle:hover{
+  transform:translateY(-8px) scale(1.05);
+  box-shadow:0 35px 80px rgba(0,0,0,.35);
+}
+Step 3 — Save
+Scroll down → Commit changes.
 
   <div>
     <h3>Start Lease Partnership</h3>
